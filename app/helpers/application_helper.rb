@@ -1,5 +1,4 @@
 module ApplicationHelper
-end
 def full_title(page_title)
 base_title="Ruby on the rails tutorial sample app"
 if page_title.empty?
