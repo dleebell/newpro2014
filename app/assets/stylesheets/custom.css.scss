@@ -1,10 +1,15 @@
 @import "bootstrap";
 
+/*mixins, variables, etc.*/
+$grayMediumLight: #eaeaea;
+
 /*universal*/
 
 html {overflow-y: scroll;}
 
-body {padding-top: 60px:}
+body {
+padding-top: 60px;
+}
 
 section {overflow: auto;}
 
@@ -28,7 +33,7 @@ letter-spacing: -1px;
 margin-bottom: 30px;
 text-align: center;
 font-weight: normal;
-colour: #999;
+colour: $grayLight;
 }
 
 p{font-size: 1.1em;
@@ -40,16 +45,16 @@ line-height: 1.7em;}
 	float: left;
 	margin-right: 10px;
 	font-size: 1.7em;
-	colour: #fff;
+	colour: white;
 	text-transform: uppercase;
 	letter-spacing: -1px;
 	padding-top: 9px;
 	font-weight: bold;
 	line-hight: 1;
-}
 #logo:hover{
-	colour: #fff;
+	colour: white;
 	text-decoration: none;
+}
 }
 
 /*footer*/
@@ -57,25 +62,25 @@ line-height: 1.7em;}
 footer{
 	margin-top: 45px;
 	padding-top: 5px;
-	border-top: 1px solid #eaeaea;
-	colour: #999;
-}
-
-footer a {
-	colour: #555;
-}
-footer a:hover {
-	colour: #222;
-}
-
-footer small {
+	border-top: 1px solid $grayMediumLight;
+	colour: $grayLight;
+	a {
+	colour: $gray;
+	&:hover{
+	colour:$grayDarker;
+	}
+	}
+small {
 	float: left;
 }
-footer ul {
+ul {
 	float: right;
 	list-style: none;
-}
-footer ul li {
+	li {
 	float: left;
-	margin-left: 10px;
+	margin-left: 10pm;
+	}
 }
+}
+
+
