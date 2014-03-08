@@ -1,6 +1,11 @@
-<h1>sample app</h1>
-	<p>
-This is the home page for the 
+<div class="centre hero-unit">
+<h1>Welcome to the sampl app</h1>
+<h2>
+This is the home page for the
 <a href="http://railstutorial.org/">Ruby On the Rails tutorial</a>
 sample application.
-</p>
+</h2>
+<%=link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary"%>
+</div>
+<%=link_to image_tag("rail.png", alt: "Rails"), 'http://rubyonrails.org/'%>
+
