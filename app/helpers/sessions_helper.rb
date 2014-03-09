@@ -7,7 +7,7 @@ module SessionsHelper
 		self.current_user=user
 	end
 
-	def sign_in?
+	def signed_in?
 		!current_user.nil?
 	end
 
@@ -15,9 +15,16 @@ module SessionsHelper
 		@current_user=user
 	end
 
-	def current user
-		remember_token=User.has(cookies[:remember_token])
+	def current_user
+		remember_token=User.hash(cookies[:remember_token])
 		@current_user ||=User.find_by(remember_token: remember_token)
+	end
+
+	def sign_out
+		current_user.update_attribute(:remember_token,
+		User.hash(User.new_remember_token))
+		cookies.delete(:remember_token)
+		self.current_user=nil
 	end
 end
 
